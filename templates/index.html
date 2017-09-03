@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>RSS Reader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+	{% for key, value in results.items() %}
+	<div class="row justify-content-center">
+
+
+		<div class="col-4">
+			<p>{{ key }}</p>
+		</div>
+		<div class="col-4">
+      <center>
+			     <a href="{{ value }}">Read More</a>
+      </center>
+		</div>
+
+	</div>
+
+
+{% endfor %}
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+
+
+</body>
+</html>
